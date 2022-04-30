@@ -1,7 +1,7 @@
 #!/bin/bash
 export TZ=${TZ:-UTC}
 export INTERNAL_IP="$(ip route get 1 | awk '{print $(NF-2);exit}')"
-cd /home/container || echo "Failed to change directory, missing /home/container or user?" && exit 1
+cd /home/container || (echo "Failed to change directory, missing /home/container or user?" && exit 1)
 
 echo "Entered container."
 
