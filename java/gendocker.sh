@@ -4,7 +4,7 @@
 mkdir -p build
 
 # Hardlinks the entrypoint into the build folder so Docker can find it.
-ln entrypoint.sh build/entrypoint.sh
+ln -f entrypoint.sh build/entrypoint.sh
 
 # Determine the Java package to get; argument 1 must be set.
 case $1 in
