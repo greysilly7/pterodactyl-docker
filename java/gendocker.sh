@@ -7,6 +7,7 @@ mkdir -p build
 ln -f entrypoint.sh build/entrypoint.sh
 
 # Determine the Java package to get; argument 1 must be set.
+echo $1
 case $1 in
   8-jre)openjdk="openjdk-8-jre-headless";;
   8-jdk)openjdk="openjdk-8-jdk-headless";;
@@ -14,6 +15,8 @@ case $1 in
   11-jdk)openjdk="openjdk-11-jdk-headless";;
   17-jre)openjdk="openjdk-17-jre-headless";;
   17-jdk)openjdk="openjdk-17-jdk-headless";;
+  19-jre)openjdk="openjdk-19-jre-headless";;
+  19-jdk)openjdk="openjdk-19-jdk-headless";;
   *)echo "Unknown OpenJDK variant $1";exit 1;;
 esac
 
