@@ -13,8 +13,8 @@ jobs:
       fail-fast: true
       matrix:
         tag:
-          - 17-jre
-          - 17-jdk
+          - 19-jre
+          - 19-jdk
     steps:
       - uses: actions/checkout@v2
       - name: Generate Dockerfile
@@ -36,4 +36,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/the-glitch-network/pterodactyl-java:bullseye-jemalloc-${{ matrix.tag }}
+            ghcr.io/greysilly7/pterodactyl-docker:bullseye-jemalloc-${{ matrix.tag }}
