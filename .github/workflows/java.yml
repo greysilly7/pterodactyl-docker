@@ -36,4 +36,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/greysilly7/pterodactyl-docker:bullseye-jemalloc-${{ matrix.tag }}
+            ghcr.io/greysilly7/pterodactyl-java:bullseye-jemalloc-${{ matrix.tag }}
