@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Generate Dockerfile
         working-directory: ./java
-        run: ./gendocker.sh ${{ matrix.tag }}
+        run: ./java/gendocker.sh ${{ matrix.tag }}
         shell: bash
       - uses: docker/setup-buildx-action@v1
       - name: Login to GitHub Container Registry
